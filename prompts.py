@@ -1,0 +1,5 @@
+user_prompt_action = "Type add, edit, show or exit :"
+user_prompt_action_Error = "Command is not valid !"
+user_prompt_edit_new_todo = "Enter the new todo: "
+user_prompt_edit_ValueError = "Your command is not valid."
+user_prompt_complete_IndexError = "There is no item with that number."
