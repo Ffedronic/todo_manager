@@ -8,8 +8,9 @@ add_button = FreeSimpleGUI.Button("Add")
 list_box = FreeSimpleGUI.Listbox(values=functions.get_todos(), key="todos", enable_events=True, size=(45, 10))
 edit_button = FreeSimpleGUI.Button("Edit")
 
+layout = [[label],[input_box, add_button],[list_box, edit_button]]
 window = FreeSimpleGUI.Window("hello GUI",
-                              layout=[[label],[input_box, add_button],[list_box, edit_button]],
+                              layout=layout,
                               font=("Helvetica", 12)
                               )
 while True :
