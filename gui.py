@@ -1,6 +1,11 @@
 import functions
 import FreeSimpleGUI
 import time
+import os
+
+if not os.path.exists('todos_item.txt'):
+    with open('todos_item.txt', 'w') as f:
+        pass
 
 FreeSimpleGUI.theme("Dark")
 label_time = FreeSimpleGUI.Text("",key="time")
@@ -20,8 +25,7 @@ window = FreeSimpleGUI.Window("hello GUI",
                               font=("Helvetica", 12)
                               )
 while True :
-    event, values = window.read(timeout=400)
-    window["time"].update(value=time.strftime("%b %d, %Y %H:%M:%S"))
+    event, values = window.read(timeout=200)
     match event :
         case "Add" :
             todos = functions.get_todos()
@@ -73,5 +77,7 @@ while True :
 
         case FreeSimpleGUI.WIN_CLOSED :
             break
+
+    window["time"].update(value=time.strftime("%b %d, %Y %H:%M:%S"))
 
 window.close()
