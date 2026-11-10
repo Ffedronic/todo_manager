@@ -4,8 +4,6 @@ import functions
 # from prompts import user_prompt_action, user_prompt_edit_new_todo
 import prompts
 
-import FreeSimpleGUI
-
 import time
 
 now = time.strftime("%b %d, %Y %H:%M:%S")
