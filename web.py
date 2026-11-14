@@ -13,6 +13,8 @@ st.title("My Todos App")
 st.subheader("This is my todos app")
 st.write("This is my app is to increase my productivity.")
 
+st.text_input(label="Todo Input", placeholder="Enter a new todo...", on_change=add_todo, key="new_todo")
+
 for index, item in enumerate(todos):
     checkbox = st.checkbox(item, key=item)
     if checkbox:
@@ -21,4 +23,4 @@ for index, item in enumerate(todos):
         del st.session_state[item]
         st.rerun()
 
-st.text_input(label="Todo Input", placeholder="Enter a new todo...", on_change=add_todo, key="new_todo")
+
